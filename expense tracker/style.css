@@ -1,0 +1,153 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --box-shadow: #f5ebe0;
+}
+
+body {
+  background-color: #ffedca;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  text-transform: capitalize;
+}
+
+.container {
+  margin: 30px;
+  width: 350px;
+}
+
+h1 {
+  letter-spacing: 1px;
+}
+
+h3 {
+  border-bottom: 1px solid #bbb;
+  padding-bottom: 10px;
+  margin: 40px 0 10px;
+}
+
+h4 {
+  text-transform: uppercase;
+}
+
+.inc-exp-container {
+  background-color: #f9f7f3;
+  box-shadow: var(--box-shadow);
+  display: flex;
+  justify-content: center;
+  padding: 20px 30px;
+  margin-block: 20px;
+}
+
+.inc-exp-container > div {
+  flex: 1;
+  text-align: center;
+}
+
+.inc-exp-container > div:first-of-type {
+  border-right: 1px solid #dedede;
+}
+
+.momey {
+  font-size: 2;
+  letter-spacing: 1px;
+  margin: 5px 0;
+}
+
+.momey-plus {
+  color: rgb(35, 202, 1);
+}
+
+.money-minus {
+  color: red;
+}
+
+label {
+  display: inline-block;
+  margin: 10px 0;
+}
+
+input[type="text"],
+input[type="number"] {
+  border: 1px solid #dedede;
+  border-radius: 2px;
+  display: block;
+  font-size: 16px;
+  padding: 10px;
+  width: 100%;
+  text-transform: capitalize;
+}
+
+.btn {
+  cursor: pointer;
+  background-color: rgb(116, 21, 21);
+  box-shadow: var(--box-shadow);
+  color: white;
+  text-transform: capitalize;
+  border: 0;
+  display: block;
+  font-size: 16px;
+  margin: 10px 0 30px;
+  padding: 10px;
+  width: 100%;
+}
+
+.btn:focus,
+.delete-btn:focus {
+  outline: 0;
+}
+
+.list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 40px;
+}
+
+.list li {
+  background-color: #bbb;
+  box-shadow: var(--box-shadow);
+  color: #0c0c0c;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+.list li.plus {
+  border-right: 5px solid green;
+}
+
+.list li.minus {
+  border-right: 5px solid red;
+}
+
+.delet-btn {
+  cursor: pointer;
+  background-color: rgb(212, 32, 32);
+  border: 0;
+  color: #fff;
+  font-size: 20px;
+  line-height: 20px;
+  padding: 2px 5px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translate(-100%, -50%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.list li:hover .delet-btn {
+  opacity: 1;
+}
